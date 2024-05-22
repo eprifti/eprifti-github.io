@@ -3,11 +3,11 @@ layout: home
 title: Home
 ---
 
-# Welcome to My Research Page
-
-Hello! I am [Your Name], a passionate researcher in Artificial Intelligence. My work focuses on advancing the fields of machine learning, natural language processing, and computer vision. On this website, you can find information about my research projects, publications, and professional background.
-
-Feel free to explore and learn more about my work and contributions to the AI community.
+<div class="hero">
+    <h2>Welcome to My Research Page</h2>
+    <p>I am a researcher in Artificial Intelligence. Here you can find information about my research, publications, and more.</p>
+    <a href="{{ site.baseurl }}/about/" class="btn">Learn More About Me</a>
+</div>
 
 ## Research Interests
 
