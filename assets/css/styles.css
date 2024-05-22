@@ -4,13 +4,13 @@ body {
     line-height: 1.8;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
+    background-color: #f8f9fa;
     color: #333;
 }
 
 header {
-    background: #1a1a2e;
-    color: #e4e4e4;
+    background: #007acc;
+    color: #fff;
     padding: 20px 0;
     text-align: center;
 }
@@ -18,11 +18,11 @@ header {
 header h1 {
     margin: 0;
     font-size: 2.5em;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 header h1 a {
-    color: #e4e4e4;
+    color: #fff;
     text-decoration: none;
 }
 
@@ -32,7 +32,7 @@ nav ul {
     margin: 0;
     display: flex;
     justify-content: center;
-    background: #16213e;
+    background: #005bb5;
 }
 
 nav ul li {
@@ -43,12 +43,13 @@ nav ul li a {
     display: block;
     padding: 15px 20px;
     text-decoration: none;
-    color: #e4e4e4;
+    color: #fff;
     transition: background 0.3s, color 0.3s;
+    font-weight: 600; /* Consistent font weight */
 }
 
 nav ul li a:hover {
-    background: #0f3460;
+    background: #004494;
     color: #fff;
 }
 
@@ -62,8 +63,8 @@ nav ul li a:hover {
 }
 
 footer {
-    background: #1a1a2e;
-    color: #e4e4e4;
+    background: #007acc;
+    color: #fff;
     text-align: center;
     padding: 20px 0;
     position: relative;
@@ -77,7 +78,7 @@ footer p {
 }
 
 footer a {
-    color: #e4e4e4;
+    color: #fff;
     text-decoration: none;
 }
 
@@ -85,21 +86,6 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* Responsive Design */
-@media (max-width: 600px) {
-    nav ul {
-        flex-direction: column;
-    }
-
-    nav ul li {
-        margin: 5px 0;
-    }
-
-    .container {
-        width: 95%;
-        padding: 10px;
-    }
-}
 form {
     max-width: 600px;
     margin: 0 auto;
