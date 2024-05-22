@@ -1,29 +1,40 @@
-title: "AI Researcher"
-email: "your-email@example.com"
-description: "A website for an AI researcher"
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://eprifti.github.io" # the base hostname & protocol for your site
-twitter_username: eprifti
-github_username: eprifti
+name: Jekyll site CI
 
-theme: minima
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
-# Jekyll Scholar settings
-scholar:
-  style: apa
-  locale: en
-  source: ./_bibliography
-  bibliography: references.bib
+jobs:
+  build:
+    runs-on: ubuntu-latest
 
-plugins:
-  - jekyll-scholar
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
 
-# Navigation
-header_pages:
-  - index.md
-  - about.md
-  - publications.md
-  - projects.md
-  - newpage.md
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.1'
 
-markdown: kramdown
+    - name: Install dependencies
+      run: |
+        gem install bundler
+        bundle install
+
+    - name: Build the site
+      run: bundle exec jekyll build
+
+    - name: Deploy to GitHub Pages
+      if: github.ref == 'refs/heads/main'
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+        publish_branch: gh-pages
+        publish_dir: ./_site
+
+
