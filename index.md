@@ -3,7 +3,7 @@ layout: home
 title: Home
 ---
 
-# Welcome to My AI Research Page
+# Welcome to My Research Page
 
 Hello! I am [Your Name], a passionate researcher in Artificial Intelligence. My work focuses on advancing the fields of machine learning, natural language processing, and computer vision. On this website, you can find information about my research projects, publications, and professional background.
 
